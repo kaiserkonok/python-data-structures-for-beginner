@@ -5,6 +5,7 @@ def insertion_sort(arr):
             temp = arr[j]
             arr[j] = arr[j + 1]
             arr[j + 1] = temp
+            j = j - 1
 
 
 data = [3, 9, 2, 20, 13, 30, 50, 31, 90]
