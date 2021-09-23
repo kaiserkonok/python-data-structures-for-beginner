@@ -1,15 +1,16 @@
 def insertion_sort(arr):
     for i in range(len(arr)):
+        current = arr[i]
         j = i - 1
-        while j >= 0 and arr[j] > arr[j + 1]:
-            temp = arr[j]
-            arr[j] = arr[j + 1]
-            arr[j + 1] = temp
+        while j >= 0 and arr[j] > current:
+            arr[j + 1] = arr[j]
             j = j - 1
 
+        arr[j + 1] = current
 
-data = [3, 9, 2, 20, 13, 30, 50, 31, 90]
 
-insertion_sort(data)
+arr = [3, 2, 39, 32, 301, 392, 304, 220]
 
-print(data)
+insertion_sort(arr)
+
+print(arr)
